@@ -12,8 +12,8 @@ let	name=nameInput.value;
 		return;
 	}
 	else{
-   const agepromise=new Promise((resolve,reject)=>{
-    setTimeout(()=>{
+   const agepromise=new Promise((resolve,reject)=>
+	   {setTimeout(()=>{
      if(age<18){
 		 reject("Oh sorry " + name + ". You aren't old enough.");
             } else {
