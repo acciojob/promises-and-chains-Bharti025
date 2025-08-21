@@ -12,23 +12,20 @@ let	name=nameInput.value;
 		return;
 	}
 	else{
-    	if(age<18){
-			
- const promise2= new Promise((resolve,reject)=>{
-  setTimeout(()=>{
-	  resolve(alert("Oh sorry . You aren't old enough."));
-   }) })
-
-		}
-	
-else{
-const promise1= new Promise((resolve,reject)=>{
-  setTimeout(()=>{
-	  resolve(alert("Welcome, . You can vote."));
+   const agepromise=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+     if(age<18){
+		 reject("Oh sorry " + name + ". You aren't old enough.");
+            } else {
+                resolve("Welcome, " + name + ". You can vote.");
+	 }	
+	},4000);
+	agepromise.then((message)=>{
+		alert(message));
+	}).catch(errorMessage=>{
+		alert((errorMessage));
+	}) 
    })
-});
-	
-}	
 	}
 }
 
