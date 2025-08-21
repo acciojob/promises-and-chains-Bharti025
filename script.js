@@ -1,14 +1,15 @@
 //your JS code here. If required.
 const btn=document.getElementById("btn");
-let age=document.getElementById('age');
-let name=document.getElementById("name");
+let ageInput=document.getElementById('age');
+let nameInput=document.getElementById("name");
 
 
 function check(){
-age=parseInt(age.value);
-	name=name.value;
+let age=parseInt(ageInput.value);
+let	name=nameInput.value;
 	if(!age || !name){
 		alert("Please enter valid details");
+		return;
 	}
 	else{
     	if(age<18){
