@@ -6,12 +6,12 @@ let nameInput=document.getElementById("name");
 
 function check(){
 let age=parseInt(ageInput.value);
-let	name=nameInput.value;
+let	name=nameInput.value.trim();
 	if(!age || !name){
 		alert("Please enter valid details");
 		return;
 	}
-	else{
+	
    const agepromise=new Promise((resolve,reject)=>
 	   {setTimeout(()=>{
      if(age<18){
@@ -20,13 +20,14 @@ let	name=nameInput.value;
                 resolve("Welcome, " + name + ". You can vote.");
 	 }	
 	},4000);
-	agepromise.then((message)=>{
+	agepromise.then(message=>{
 		alert(message));
-	}).catch(errorMessage=>{
-		alert(errorMessage));
+	}).catch(error=>{
+		alert(error));
 	}) 
-   })
-	}
+   
+	
+})
 }
 
 btn.addEventListener("click",check);
