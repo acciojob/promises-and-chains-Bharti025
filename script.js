@@ -1,4 +1,5 @@
-//your JS code here. If const btn = document.getElementById("btn");
+//your JS code here. If 
+const btn = document.getElementById("btn");
 let ageInput = document.getElementById('age');
 let nameInput = document.getElementById("name");
 
