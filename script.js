@@ -23,7 +23,7 @@ let	name=nameInput.value;
 	agepromise.then((message)=>{
 		alert(message));
 	}).catch(errorMessage=>{
-		alert((errorMessage));
+		alert(errorMessage));
 	}) 
    })
 	}
